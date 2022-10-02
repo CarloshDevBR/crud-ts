@@ -33,6 +33,12 @@ function App() {
     setList(newList)
   }
 
+  const handleDeleteTask = (id: number) => {
+    const listFiltered = list.filter(task => task.id != id)
+
+    setList(listFiltered)
+  }
+
   return (
     <Container>
       <Area>
@@ -45,6 +51,7 @@ function App() {
             <ListItem
               key={index}
               item={item}
+              handleDeleteTask={handleDeleteTask}
             />
           ))
         }

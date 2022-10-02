@@ -4,17 +4,22 @@ type ContainerProps = {
     done: boolean;
 }
 
-export const Container = styled.div(({ done }: ContainerProps)=>(
-    `
+export const Container = styled.div `
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+    border-radius: 10px;
+    background-color: #20212C;
+`
+
+export const ContainerTask = styled.div(({ done }: ContainerProps)=>(
+    `  
         display: flex;
-        padding: 10px;
-        margin-bottom: 10px;
+        width: 50%;
         align-items: center;
         gap: 10px;
-        
-        border-radius: 10px;
-        background-color: #20212C;
-        
+
         input {
             width: 25px;
             height: 25px;
@@ -26,5 +31,18 @@ export const Container = styled.div(({ done }: ContainerProps)=>(
             color: #CCC;
             text-decoration: ${done ? 'line-through' : 'initial'};
         }
-`
+    `
 ))
+
+export const ContainerImage = styled.div `
+    width: 50%;
+
+    img {
+        width: 25px;
+        height: 25px;
+
+        float: right;
+
+        cursor: pointer;
+    }
+`
