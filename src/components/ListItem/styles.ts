@@ -36,6 +36,7 @@ export const ContainerTask = styled.div(({ done }: ContainerProps)=>(
 
 export const ContainerImage = styled.div `
     width: 50%;
+    align-self: center;
 
     img {
         width: 25px;
